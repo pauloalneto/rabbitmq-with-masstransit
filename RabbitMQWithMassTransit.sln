@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE18D8E2-FBDE-407C-8FCF-9C21C4A28D2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Publisher.Api", "src\Publisher.Api\Publisher.Api.csproj", "{772A69D9-FEC7-4299-81EC-EF054A0FA49F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerWorker", "src\ConsumerWorker\ConsumerWorker.csproj", "{5B035291-EF8A-4C59-9F44-1C6461D843E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{772A69D9-FEC7-4299-81EC-EF054A0FA49F} = {DE18D8E2-FBDE-407C-8FCF-9C21C4A28D2D}
+		{5B035291-EF8A-4C59-9F44-1C6461D843E0} = {DE18D8E2-FBDE-407C-8FCF-9C21C4A28D2D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{772A69D9-FEC7-4299-81EC-EF054A0FA49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772A69D9-FEC7-4299-81EC-EF054A0FA49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772A69D9-FEC7-4299-81EC-EF054A0FA49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772A69D9-FEC7-4299-81EC-EF054A0FA49F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B035291-EF8A-4C59-9F44-1C6461D843E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B035291-EF8A-4C59-9F44-1C6461D843E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B035291-EF8A-4C59-9F44-1C6461D843E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B035291-EF8A-4C59-9F44-1C6461D843E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
