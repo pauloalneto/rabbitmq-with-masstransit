@@ -23,6 +23,7 @@ builder.Services.AddMassTransit(bus =>
         string virtualHost = builder.Configuration.GetSection("rabbitmq:virtualHost").Value ?? "";
         string user = builder.Configuration.GetSection("rabbitmq:user").Value ?? "";
         string password = builder.Configuration.GetSection("rabbitmq:password").Value ?? "";
+        string exchange = builder.Configuration.GetSection("rabbitmq:exchange").Value ?? "";
         
         cfg.Host(host, virtualHost, h =>
         {
@@ -32,8 +33,8 @@ builder.Services.AddMassTransit(bus =>
         
         cfg.UseRawJsonSerializer();
         
-        // cfg.Send<InvoiceEvent>(x => x.UseRoutingKeyFormatter(x => "invoice.created"));
-        cfg.Message<InvoiceEvent>(x => x.SetEntityName("invoice"));
+        cfg.Send<InvoiceEvent>(x => x.UseRoutingKeyFormatter(x => "invoice.created"));
+        cfg.Message<InvoiceEvent>(x => x.SetEntityName(exchange));
         cfg.Publish<InvoiceEvent>(x =>
         {
             x.Durable = true;
